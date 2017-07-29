@@ -1,0 +1,7 @@
+<launch>
+  <arg name="dev" default="/dev/ttyACM0"/>
+  <param name="dev" value="$(arg dev)" />
+  <env name="ROSCONSOLE_FORMAT" value="[${thread}] [${node}/${function}:${line}]: ${message}"/>
+    <node pkg="rover_drive" name="driver" type="drive.py" output="screen" />
+    <node pkg="rover_drive" name="cmd_vel_muxer" type="cmd_vel_muxer.py" output="screen" />
+</launch>

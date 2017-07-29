@@ -1,0 +1,6 @@
+#!/usr/bin/env python
+
+import cmd_vel_mux
+
+if __name__ == '__main__':
+    cmd_vel_mux.main()

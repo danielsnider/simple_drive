@@ -1,0 +1,6 @@
+#!/usr/bin/env python
+
+import drive_teleop
+
+if __name__ == '__main__':
+    drive_teleop.main()

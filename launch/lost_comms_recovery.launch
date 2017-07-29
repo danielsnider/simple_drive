@@ -1,0 +1,16 @@
+<launch>
+    <env name="ROSCONSOLE_FORMAT" value="[${severity}][${thread}][${node}/${function}:${line}]: ${message}"/>
+
+    <arg name="ips_to_monitor" default="192.168.1.2,192.168.1.3"/>
+
+    <node pkg="lost_comms_recovery" type="lost_comms_recovery" name="lost_comms_recovery" clear_params="true" output="screen" respawn="true" >
+      <param name="ping_fail_count" value="1"/>
+      <param name="goal_frame_id" value="map"/>
+      <param name="ips_to_monitor" value="$(arg ips_to_monitor)"/>
+      <!-- INPUT TOPICS -->
+      <remap from="recovery_pose" to="recovery_pose" />
+      <!-- OUTPUT TOPICS -->
+      <remap from="cmd_vel" to="cmd_vel" /> <!-- zero motors -->
+      <remap from="joy" to="joy" /> <!-- zero joystick -->
+    </node>
+</launch>
