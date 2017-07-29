@@ -1,0 +1,25 @@
+<launch>
+    <env name="ROSCONSOLE_FORMAT" value="[${severity}][${thread}][${node}/${function}:${line}]: ${message}"/>
+
+    <!-- Joystick Device Argument -->
+    <arg name="dev" default="/dev/input/js0"/>
+
+    <!-- Joy Node -->
+    <node pkg="joy" type="joy_node" name="joy_drive" clear_params="true" output="screen" respawn="true" >
+      <param name="dev" value="$(arg dev)" />
+      <param name="deadzone" value="0.12" />
+      <!-- OUTPUT TOPICS -->
+      <remap from="joy" to="joy" />
+    </node>
+
+    <!-- Teleoperation Node -->
+    <node pkg="drive_teleop" type="drive_teleop" name="drive_teleop" clear_params="true" output="screen" respawn="true">
+      <param name="timeout" type="int" value="5"/>
+      <!-- INPUT TOPICS -->
+      <remap from="joy" to="joy" />
+      <!-- OUTPUT TOPICS -->
+      <remap from="teleop/cmd_vel" to="teleop/cmd_vel" />
+      <remap from="servo" to="servo" />
+      <remap from="move_base/cancel" to="move_base/cancel" />
+    </node>
+</launch>

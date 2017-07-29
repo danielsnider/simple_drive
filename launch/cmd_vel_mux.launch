@@ -1,0 +1,12 @@
+<launch>
+    <env name="ROSCONSOLE_FORMAT" value="[${severity}][${thread}][${node}/${function}:${line}]: ${message}"/>
+
+    <node pkg="cmd_vel_mux" type="cmd_vel_mux" name="cmd_vel_mux" clear_params="true" output="screen" respawn="true">
+      <param name="timeout" type="int" value="5"/>
+      <!-- INPUT TOPICS -->
+      <remap from="teleop/cmd_vel" to="teleop/cmd_vel" />
+      <remap from="move_base/cmd_vel" to="move_base/cmd_vel" />
+      <!-- OUTPUT TOPICS -->
+      <remap from="cmd_vel" to="cmd_vel" />
+    </node>
+</launch>
