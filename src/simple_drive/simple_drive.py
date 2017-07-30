@@ -21,12 +21,13 @@ def on_new_servo(data):
     Serial.write(serial_msg)
 
 def main():
+    rospy.init_node("simple_drive")
+    
     baudrate = rospy.get_param('~baudrate', 9600)
     Serial = serial.Serial(baudrate=baudrate)
     Serial.port = rospy.get_param("~serial_dev")
     Serial.open()
 
-    rospy.init_node("simple_drive")
     subscriber_twist = rospy.Subscriber("cmd_vel", Twist, on_new_twist, queue_size=10)
     subscriber_servo = rospy.Subscriber("servo", Float32, on_new_servo, queue_size=10)
 

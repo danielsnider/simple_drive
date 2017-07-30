@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import simple_drive
+from simple_drive import simple_drive
 
 if __name__ == '__main__':
     simple_drive.main()

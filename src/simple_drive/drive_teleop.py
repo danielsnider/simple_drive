@@ -56,7 +56,7 @@ class DriveTeleop:
         self.servo_pub.publish(self.servo_position)
 
         # Cancel move base goal
-        if data.buttons[2] and data.axes[2] == -1: # X button
+        if data.buttons[2]: # X button
             rospy.loginfo('Cancelling move_base goal')
             cancel_msg = GoalID()
             self.goal_cancel_pub.publish(cancel_msg)
