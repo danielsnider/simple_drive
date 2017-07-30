@@ -2,6 +2,8 @@
 
 A full, but simple robot drive system. Includes skid steering joystick teleoperation, control of a panning servo, a cmd_vel multiplexer, and Arduino firmware.
 
+![controller](http://wiki.ros.org/simple_drive?action=AttachFile&do=get&target=Xbox_Controller.png)
+
 ## Quick Start
 
 1. Install:
