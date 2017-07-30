@@ -23,7 +23,7 @@ def on_new_servo(data):
 def main():
     baudrate = rospy.get_param('~baudrate', 9600)
     Serial = serial.Serial(baudrate=baudrate)
-    Serial.port = rospy.get_param("dev")
+    Serial.port = rospy.get_param("~serial_dev")
     Serial.open()
 
     rospy.init_node("simple_drive")
