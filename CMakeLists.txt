@@ -26,3 +26,8 @@ catkin_install_python(
 install(DIRECTORY launch/
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
 )
+
+# Install firmware files
+install(DIRECTORY drive_firmware/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/drive_firmware
+)

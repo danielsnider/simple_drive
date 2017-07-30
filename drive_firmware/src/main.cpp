@@ -14,8 +14,8 @@
 
 // PWM specs of the Spark motor controller. Spark manual:
 //      http://www.revrobotics.com/content/docs/LK-ATFF-SXAO-UM.pdf
-#define sparkMax 2000 // Default full-reverse input pulse
-#define sparkMin 1000 // Default full-forward input pulse
+#define sparkMax 1000 // Default full-reverse input pulse
+#define sparkMin 2000 // Default full-forward input pulse
 
 Servo theServo;
 Servo leftOne;
