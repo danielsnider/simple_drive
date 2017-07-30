@@ -1,6 +1,6 @@
 <package>
   <name>simple_drive</name>
-  <version>0.0.0</version>
+  <version>0.1.0</version>
   <description>
       A full, but simple robot drive system. Includes skid steering joystick teleoperation, control of a panning servo, a cmd_vel multiplexer, and Arduino firmware.
   </description>
