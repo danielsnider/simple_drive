@@ -17,7 +17,7 @@
 #define sparkMax 1000 // Default full-reverse input pulse
 #define sparkMin 2000 // Default full-forward input pulse
 
-Servo theServo;
+Servo theServo; // the servo used to control a camera that can look around the robot
 Servo leftOne;
 Servo leftTwo;
 Servo leftThree;
@@ -66,7 +66,7 @@ void loop() {
            // Serial.println((int) received.rotation);
            setWheelVelocity((int) ((received.linear + received.rotation) * 100), (int) ((received.linear - received.rotation) * 100));
        }
-       // ZED SERVO MOTOR COMMAND
+       // SERVO MOTOR COMMAND
        else if (cmd == 2) {
            Serial.readBytes((char *) &received.servo, sizeof(float));
            // Serial.print("GOT SERVO");
