@@ -1,5 +1,8 @@
 <launch>
+  <!-- Joystick Input Node -->
   <include file="$(find simple_drive)/launch/drive_teleop.launch"/>
+  <!-- Multiplex Motor Commands Node -->
   <include file="$(find simple_drive)/launch/cmd_vel_mux.launch"/>
+  <!-- Simple Drive Node -->
   <include file="$(find simple_drive)/launch/simple_drive.launch"/>
 </launch>

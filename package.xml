@@ -6,7 +6,7 @@
   </description>
   <maintainer email="danielsnider12@gmail.com">Daniel Snider</maintainer>
   <author email="danielsnider12@gmail.com">Daniel Snider</author>
-  <author>Matthew Mirvish</author>
+  <author email="matthewmirvish@hotmail.com">Matthew Mirvish</author>
   <license>Unlicense</license>
   <url type="website">http://wiki.ros.org/simple_drive</url>
   <url type="repository">https://github.com/danielsnider/simple_drive</url>
