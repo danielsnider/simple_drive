@@ -3,6 +3,8 @@
 A simple robot drive system that includes skid steering joystick teleoperation, control of a panning servo to look around the robot, and Arduino firmware.
 
 ![controller](http://wiki.ros.org/simple_drive?action=AttachFile&do=get&target=Xbox_Controller.png)
+##
+![simple_drive](http://wiki.ros.org/simple_drive?action=AttachFile&do=get&target=Simple_Drive_Diagram.png)
 
 ## Quick Start
 
