@@ -9,6 +9,6 @@
       <param name="baudrate" type="int" value="9600"/>
       <!-- INPUT TOPICS -->
       <remap from="cmd_vel" to="cmd_vel" />
-      <remap from="servo" to="servo" />
+      <remap from="servo_pos" to="servo_pos" />
     </node>
 </launch>

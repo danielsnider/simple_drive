@@ -21,7 +21,7 @@
       <remap from="joy" to="joy" />
       <!-- OUTPUT TOPICS -->
       <remap from="teleop/cmd_vel" to="teleop/cmd_vel" />
-      <remap from="servo" to="servo" />
+      <remap from="servo_pos" to="servo_pos" />
       <remap from="move_base/cancel" to="move_base/cancel" />
     </node>
 </launch>

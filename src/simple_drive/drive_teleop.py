@@ -18,7 +18,7 @@ class DriveTeleop:
 
         self.cmd_vel_pub = rospy.Publisher("teleop/cmd_vel", Twist, queue_size=1)
         self.goal_cancel_pub = rospy.Publisher("move_base/cancel", GoalID, queue_size=1)
-        self.servo_pub = rospy.Publisher("servo", Float32, queue_size=1)
+        self.servo_pub = rospy.Publisher("servo_pos", Float32, queue_size=1)
         self.joy_sub = rospy.Subscriber("joy", Joy, self.on_joy)
 
     def on_joy(self, data):

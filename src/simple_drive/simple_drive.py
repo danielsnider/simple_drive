@@ -29,6 +29,6 @@ def main():
     Serial.open()
 
     subscriber_twist = rospy.Subscriber("cmd_vel", Twist, on_new_twist, queue_size=10)
-    subscriber_servo = rospy.Subscriber("servo", Float32, on_new_servo, queue_size=10)
+    subscriber_servo = rospy.Subscriber("servo_pos", Float32, on_new_servo, queue_size=10)
 
     rospy.spin()
