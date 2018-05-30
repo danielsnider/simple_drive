@@ -21,7 +21,7 @@ class CmdVelMux:
 
     def on_human_cmd(self, twist):
         self.human_cmd_time = time.time()
-        self.block_duration = rospy.get_param('~block_duration', 5)
+        self.block_duration = rospy.get_param('~block_duration', 5) # to get the lowest latency, comment this or hard code this so that there is no call to rospy.get_param
         self.pub.publish(twist)
 
 def main():
