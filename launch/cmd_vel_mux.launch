@@ -1,7 +1,7 @@
 <launch>
     <env name="ROSCONSOLE_FORMAT" value="[${severity}][${thread}][${node}/${function}:${line}]: ${message}"/>
 
-    <node pkg="simple_drive" type="cmd_vel_mux" name="cmd_vel_mux" clear_params="true" output="screen" respawn="true">
+    <node pkg="tractor_teleop" type="cmd_vel_mux" name="cmd_vel_mux" clear_params="true" output="screen" respawn="true">
       <param name="block_duration" type="int" value="5"/>
       <!-- INPUT TOPICS -->
       <remap from="teleop/cmd_vel" to="teleop/cmd_vel" />
