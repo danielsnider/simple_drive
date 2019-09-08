@@ -26,4 +26,7 @@ $ roslaunch tractor_teleop drive.launch
 
 4. Drive your robot around.
 
+## Credits
+The package uses Daniel Snider's simple_drive http://wiki.ros.org/simple_drive
+
 
