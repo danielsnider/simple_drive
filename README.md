@@ -24,9 +24,11 @@ OR all-in-one launch:
 $ roslaunch tractor_teleop drive.launch
 ```
 3. Instructions
+```
 TODO:  Move button setup to launch file
        Instructions on setup
        Demo of package with simulator
+```
 
 4. Drive your robot around.
 
