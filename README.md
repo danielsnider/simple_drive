@@ -1,4 +1,4 @@
-# simple_drive
+# tractor_teleop
 
 A simple robot drive system for car-like vehicles.
 
@@ -9,7 +9,8 @@ A simple robot drive system for car-like vehicles.
 
 1. Install:
 
-
+catkin_ws/src$ git clone https://github.com/ros-agriculture/tractor_teleop.git
+catkin_ws$ catkin build
 
 2. Launch ROS nodes:
 
@@ -22,7 +23,10 @@ OR all-in-one launch:
 ```
 $ roslaunch tractor_teleop drive.launch
 ```
-
+3. Instructions
+TODO:  Move button setup to launch file
+       Instructions on setup
+       Demo of package with simulator
 
 4. Drive your robot around.
 
