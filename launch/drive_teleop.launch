@@ -16,6 +16,13 @@
     <!-- Teleoperation Node -->
     <node pkg="tractor_teleop" type="drive_teleop" name="drive_teleop" clear_params="true" output="screen" respawn="true">
       <!-- INPUT TOPICS -->
+      <param name="drive_axis" value="0" />
+      <param name="drive_forward_max" value="2" />
+      <param name="drive_reverse_max" value="1" />
+      <param name="turn_axis" value="1" />
+      <param name="deadman" value="4" />
+      <param name="estop" value="1" />
+      <param name="move_cancel" value="2" />
       <remap from="joy" to="joy" />
       <!-- OUTPUT TOPICS -->
       <remap from="teleop/cmd_vel" to="teleop/cmd_vel" />

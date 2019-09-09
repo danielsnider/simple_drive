@@ -8,8 +8,6 @@ from sensor_msgs.msg import Joy
 from std_msgs.msg import Float32
 from geometry_msgs.msg import Twist
 from actionlib_msgs.msg import GoalID
-# from lawn_tractor.srv import *
-
 
 
 class DriveTeleop:
@@ -17,9 +15,6 @@ class DriveTeleop:
         self.cmd_vel_pub = rospy.Publisher("teleop/cmd_vel", Twist, queue_size=1)
         self.goal_cancel_pub = rospy.Publisher("move_base/cancel", GoalID, queue_size=1)
         self.joy_sub = rospy.Subscriber("joy", Joy, self.on_joy, queue_size=1)
-
-        # self.service_relay_client = rospy.ServiceProxy("/relay_cmd", relayCmd)
-        # self.service_relay_client_object = relayCmdRequest()
 
 
     def on_joy(self, data):
@@ -39,12 +34,6 @@ class DriveTeleop:
 	# EStop
         if data.buttons[1]: # 2 button
             rospy.loginfo('Estop tractor')
-	    # self.service_relay_client_object.channel = 27
-        #    self.service_relay_client_object.state = 0
-        #    result = self.service_relay_client(self.service_relay_client_object)
-	    # if result.success == True:
-		# self.engine_off = 1
-		# self.tractor_ready = 1
 
 
 	# Cancel move base goal
