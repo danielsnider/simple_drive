@@ -25,7 +25,7 @@
       <param name="move_cancel" value="2" />
       <remap from="joy" to="joy" />
       <!-- OUTPUT TOPICS -->
-      <remap from="teleop/cmd_vel" to="teleop/cmd_vel" />
+      <remap from="teleop/cmd_vel" to="cmd_vel" />
       <remap from="move_base/cancel" to="move_base/cancel" />
     </node>
 </launch>
