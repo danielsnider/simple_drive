@@ -1,3 +1,5 @@
+<?xml version="1.0"?>
+
 <launch>
     <env name="ROSCONSOLE_FORMAT" value="[${severity}][${thread}][${node}/${function}:${line}]: ${message}"/>
 
@@ -15,15 +17,25 @@
 
     <!-- Teleoperation Node -->
     <node pkg="tractor_teleop" type="drive_teleop" name="drive_teleop" clear_params="true" output="screen" respawn="true">
-      <!-- INPUT TOPICS -->
-      <param name="drive_axis" value="0" />
-      <param name="drive_forward_max" value="2" />
-      <param name="drive_reverse_max" value="1" />
-      <param name="turn_axis" value="1" />
+      
+      <!-- INPUT Parameters -->
+      <!-- set speed control for joystick meters/second-->
+      <param name="drive_forward_max" value="5.0" />
+      <param name="drive_reverse_max" value="-1.0" />
+      <!-- which axis on the joystick for drive (forward/reverse)-->
+      <param name="drive_axis" value="1" />
+      <!-- which axis on the joystick for steering -->
+      <param name="turn_axis" value="0" />
+      <!-- deadman is the button that must be pressed to send joystick commands-->
       <param name="deadman" value="4" />
+      <!-- estop button to set tractor in a safe state -->
       <param name="estop" value="1" />
+      <!--  button to use to cancel autonomous motion  -->
       <param name="move_cancel" value="2" />
+
+      <!-- INPUT TOPICS -->
       <remap from="joy" to="joy" />
+
       <!-- OUTPUT TOPICS -->
       <remap from="teleop/cmd_vel" to="teleop/cmd_vel" />
       <remap from="move_base/cancel" to="move_base/cancel" />
